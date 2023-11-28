@@ -24,9 +24,9 @@ else
 	sleep 2
 	apt update -y
 	clear
-	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Preparando para instalar a versão 11 do Java. Confirme a instalação quando solicitado ;D"
+	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Preparando para instalar a versão 17 do Java. Confirme a instalação quando solicitado ;D"
 	sleep 1
-	apt install default-jre ; apt install openjdk-11-jre-headless; -y
+	apt install default-jre ; apt install openjdk-17-jre; -y
 	clear
 	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Java instalado com sucesso!"
 	sleep 1
@@ -85,18 +85,19 @@ fi
 
 pip install nvidia-nvml-dev-cu12
 
-apt install wget
+apt install unzip
 
 docker run -d --name mysql-monitoons --restart always -e MYSQL_ROOT_PASSWORD=animoons -e MYSQL_DATABASE=monitoons -e MYSQL_USER=animoons -e MYSQL_PASSWORD=animoons -p 3306:3306 voltty/mysql-monitoons:0.0.4
 
-wget https://github.com/AniMoons-SPTech/Java-Monitoons/blob/0061c408613833b1d3b97eb2409ae310c9226550/JARS/Monitoons-image-docker.jar -O Monitoons.jar
 
-rm -rf script.sh
+git clone https://github.com/AniMoons-SPTech/Java-Monitoons.git
+
+mv Java-Monitoons/JARS/Monitoons-image-docker.zip .
+
+unzip Monitoons-image-docker.zip
+
+rm -rf Java-Monitoons/
+
+rm *zip
 
 init 6
-
-
-
-
-
-
