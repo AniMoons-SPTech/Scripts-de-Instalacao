@@ -89,8 +89,9 @@ apt install wget
 
 docker run -d --name mysql-monitoons --restart always -e MYSQL_ROOT_PASSWORD=animoons -e MYSQL_DATABASE=monitoons -e MYSQL_USER=animoons -e MYSQL_PASSWORD=animoons -p 3306:3306 voltty/mysql-monitoons:0.0.4
 
-
 wget https://github.com/AniMoons-SPTech/Java-Monitoons/blob/0061c408613833b1d3b97eb2409ae310c9226550/JARS/Monitoons-image-docker.jar -O Monitoons.jar
+
+rm -rf script.sh
 
 init 6
 
