@@ -87,14 +87,14 @@ pip install nvidia-nvml-dev-cu12
 
 apt install unzip
 
-docker run -d --name mysql-monitoons --restart always -e MYSQL_ROOT_PASSWORD=animoons -e MYSQL_DATABASE=monitoons -e MYSQL_USER=animoons -e MYSQL_PASSWORD=animoons -p 3306:3306 voltty/mysql-monitoons:0.0.4
+docker run -d --name mysql-monitoons --restart always -e MYSQL_ROOT_PASSWORD=animoons -e MYSQL_DATABASE=monitoons -e MYSQL_USER=animoons -e MYSQL_PASSWORD=animoons -p 3306:3306 voltty/mysql-monitoons:0.0.5
 
 
 git clone https://github.com/AniMoons-SPTech/Java-Monitoons.git
 
 mv Java-Monitoons/JARS/Monitoons.zip .
 
-unzip Monitoons.zip
+unzip Monitoons-image-docker.zip
 
 rm -rf Java-Monitoons/
 
@@ -103,3 +103,4 @@ rm *zip
 rm script.sh
 
 init 6
+
