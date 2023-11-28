@@ -92,12 +92,14 @@ docker run -d --name mysql-monitoons --restart always -e MYSQL_ROOT_PASSWORD=ani
 
 git clone https://github.com/AniMoons-SPTech/Java-Monitoons.git
 
-mv Java-Monitoons/JARS/Monitoons-image-docker.zip .
+mv Java-Monitoons/JARS/Monitoons.zip .
 
-unzip Monitoons-image-docker.zip
+unzip Monitoons.zip
 
 rm -rf Java-Monitoons/
 
 rm *zip
+
+rm script.sh
 
 init 6
