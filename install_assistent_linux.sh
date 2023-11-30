@@ -94,7 +94,7 @@ git clone https://github.com/AniMoons-SPTech/Java-Monitoons.git
 
 mv Java-Monitoons/JARS/Monitoons.zip .
 
-unzip Monitoons-image-docker.zip
+unzip Monitoons.zip
 
 rm -rf Java-Monitoons/
 
